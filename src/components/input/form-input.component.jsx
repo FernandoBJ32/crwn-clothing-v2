@@ -1,22 +1,42 @@
-import "./form-input.styles.scss";
+// import "./form-input.styles.scss";
 
-const FormInput =({label, ...otherProps }) => { //inputOptions (cambiar en todos los que dice otherProps)
-    return (
-        <div className="group"> 
-           <input className="form-input"{...otherProps} /> 
-            { label && (
-            <label 
+// const FormInput =({label, ...otherProps }) => { //inputOptions (cambiar en todos los que dice otherProps)
+//     return (
+//         <div className="group"> 
+//            <input className="form-input"{...otherProps} /> 
+//             { label && (
+//             <label 
             
-            className={`${
-                otherProps.value.length ? "shrink" : ''
-            }form-input-label`}
-            >
-                {label}
-            </label>
-            )}
+//             className={`${
+//                 otherProps.value.length ? "shrink" : ''
+//             }form-input-label`}
+//             >
+//                 {label}
+//             </label>
+//             )}
            
-        </div>
-    );
+//         </div>
+//     );
+// };
+
+// export default FormInput;
+import './form-input.styles.scss'
+
+const FormInput = ({ label, ...otherProps }) => {
+  return (
+    <div className='group'>
+      <input className='form-input' {...otherProps} />
+      {label && (
+        <label
+          className={`${
+            otherProps.value.length ? 'shrink' : ''
+          } form-input-label`}
+        >
+          {label}
+        </label>
+      )}
+    </div>
+  );
 };
 
 export default FormInput;
